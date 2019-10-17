@@ -1,0 +1,353 @@
+@import "./reset.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.prewie {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 50px;
+  height: 500px;
+  background: url("../img/brest-approve.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -145px;
+
+  .prewieTitle {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 650px;
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  .prewieTitle::before {
+    top: 140px;
+    left: 51px;
+  }
+
+  .prewieTitle::after {
+    bottom: 140px;
+    right: 51px;
+  }
+}
+
+.prewieTitle::before,
+.prewieTitle::after,
+.stack h2::before,
+.stack h2::after,
+.title h2::before,
+.title h2::after,
+.toolsInfo h2::before,
+.toolsInfo h2::after,
+.projectsInfo h2::before,
+.projectsInfo h2::after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background-color: #ffc000;
+  position: absolute;
+}
+
+.competenceContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.competenceItem {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+
+  img {
+    align-self: center;
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    color: #000000;
+    text-align: center;
+    margin: 20px;
+  }
+
+  p {
+    font-style: 1rem;
+    text-align: justify;
+  }
+
+  &:first-child {
+    border-right: 2px solid #ffc000;
+  }
+}
+
+.tools,
+.projects {
+  margin: 30px 0;
+}
+.tools {
+  display: flex;
+  justify-content: space-between;
+
+  .bgImage {
+    filter: brightness(0.3);
+  }
+
+  .toolsInfo {
+    width: 60%;
+    position: relative;
+
+    p {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+    }
+
+    .stack {
+      background-color: #fff;
+      padding: 20px;
+      color: #000000;
+    }
+
+    .toolsLogo {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.bgImage {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  max-height: 300px;
+
+  .bgImage {
+    padding: 20px;
+    background-color: #76cdd8;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .projectsInfo {
+    width: 60%;
+    position: relative;
+    padding: 20px;
+  }
+}
+
+.toolsInfo .stack h2,
+.communities h2,
+.toolsInfo h2,
+.projectsInfo h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  width: 800px;
+  margin: 15px auto;
+}
+
+.stack h2::before,
+.title h2::before,
+.toolsInfo h2::before,
+.projectsInfo h2::before {
+  top: 0;
+  left: 0;
+}
+
+.stack h2::after,
+.title h2::after,
+.toolsInfo h2::after,
+.projectsInfo h2::after {
+  bottom: 0;
+  right: 0;
+}
+
+.stack img {
+  width: 100%;
+}
+
+.communities {
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/conf-long.png");
+  padding: 50px;
+
+  .communtiesWrapper {
+    display: flex;
+    justify-content: space-around;
+
+    figure {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      img {
+        width: 9rem;
+      }
+
+      figcaption {
+        text-align: left;
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .communtiesWrapper,
+  .title {
+    color: #fff;
+  }
+
+  .comunities-item {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #fff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+
+    &:hover .communitiesItemDescription {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+    }
+
+    &:first-of-type .communitiesItemDescription {
+      background-color: rgba(118, 205, 216, 0.65);
+    }
+
+    &:nth-of-type(2) .communitiesItemDescription {
+      background-color: rgba(127, 101, 22, 0.65);
+    }
+
+    &:last-of-type .communitiesItemDescription p {
+      color: #000000;
+    }
+
+    &:last-child img {
+      width: 14rem;
+    }
+  }
+
+  .communitiesItemDescription {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    p {
+      padding: 20px;
+    }
+  }
+}
+
+.communities figcaption::after,
+.growItem figcaption::after {
+  content: " ";
+  width: 50px;
+  height: 5px;
+  background: #ffc000;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.communtiesWrapper figure .grow {
+  text-align: center;
+  color: #000000;
+  padding: 40px 20px;
+}
+
+.title {
+  padding: 10px;
+}
+
+.grow h2,
+.competence h2 {
+  font-size: 2.5rem;
+  position: relative;
+  margin: 15px auto;
+  width: 500px;
+  color: #000000;
+  text-align: center;
+}
+
+.title p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.growList {
+  display: flex;
+  justify-content: space-around;
+
+  .growItem {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ffc000;
+    text-align: justify;
+
+    &:hover img {
+      filter: none;
+    }
+
+    img {
+      width: 100%;
+      height: 350px;
+      background-color: rgba(0, 0, 0, 0.7);
+      filter: brightness(0.5);
+    }
+    figcaption {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      position: relative;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
