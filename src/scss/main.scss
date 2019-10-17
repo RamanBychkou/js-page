@@ -47,14 +47,14 @@ body {
 
 .prewieTitle::before,
 .prewieTitle::after,
-.stack h2::before,
-.stack h2::after,
-.title h2::before,
-.title h2::after,
-.toolsInfo h2::before,
-.toolsInfo h2::after,
-.projectsInfo h2::before,
-.projectsInfo h2::after {
+.stack span::before,
+.stack span::after,
+.title span::before,
+.title span::after,
+.toolsInfo span::before,
+.toolsInfo span::after,
+.projectsInfo span::before,
+.projectsInfo span::after {
   content: " ";
   width: 100px;
   height: 5px;
@@ -174,25 +174,32 @@ body {
 .projectsInfo h2 {
   font-size: 2.5rem;
   text-align: center;
-  position: relative;
   width: 800px;
   margin: 15px auto;
 }
 
-.stack h2::before,
-.title h2::before,
-.toolsInfo h2::before,
-.projectsInfo h2::before {
-  top: 0;
-  left: 0;
+.competence h2 span,
+.toolsInfo .stack h2 span,
+.communities h2 span,
+.toolsInfo h2 span,
+.projectsInfo h2 span {
+  position: relative;
 }
 
-.stack h2::after,
-.title h2::after,
-.toolsInfo h2::after,
-.projectsInfo h2::after {
+.stack span::before,
+.title span::before,
+.toolsInfo span::before,
+.projectsInfo span::before {
+  top: 0;
+  left: -125px;
+}
+
+.stack span::after,
+.title span::after,
+.toolsInfo span::after,
+.projectsInfo span::after {
   bottom: 0;
-  right: 0;
+  right: -125px;
 }
 
 .stack img {
@@ -288,7 +295,7 @@ body {
 }
 
 .communities figcaption::after,
-.growItem figcaption::after {
+.eventItem figcaption::after {
   content: " ";
   width: 50px;
   height: 5px;
@@ -297,7 +304,7 @@ body {
   bottom: -10px;
   left: 0;
 }
-.communtiesWrapper figure .grow {
+.communtiesWrapper figure .events {
   text-align: center;
   color: #000000;
   padding: 40px 20px;
@@ -307,7 +314,11 @@ body {
   padding: 10px;
 }
 
-.grow h2,
+.events {
+  padding: 20px;
+}
+
+.events h2,
 .competence h2 {
   font-size: 2.5rem;
   position: relative;
@@ -322,11 +333,11 @@ body {
   text-align: center;
 }
 
-.growList {
+.eventsList {
   display: flex;
   justify-content: space-around;
 
-  .growItem {
+  .eventItem {
     width: 500px;
     padding: 20px;
     border: 1px solid #ffc000;
