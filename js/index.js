@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["js/index,js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["js/index.js"],{
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -11,4 +11,4 @@ eval("\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
-},[["./src/index.js","runtime~js/index,js"]]]);
+},[["./src/index.js","runtime~js/index.js"]]]);

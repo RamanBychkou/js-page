@@ -57,7 +57,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"runtime~css/main.css": 0
+/******/ 		"runtime~js/index.js": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
