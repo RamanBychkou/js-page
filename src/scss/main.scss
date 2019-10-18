@@ -1,8 +1,12 @@
 @import "./reset.scss";
+@import "./fonts.scss";
 
 body {
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+}
+
+p {
+  font-family: "Source Sans Pro";
 }
 
 .container {
@@ -87,6 +91,8 @@ body {
     color: #000000;
     text-align: center;
     margin: 20px;
+    font-family: "Museo Sans";
+    font-weight: 500;
   }
 
   p {
@@ -166,6 +172,9 @@ body {
     position: relative;
     padding: 20px;
   }
+}
+h2 {
+  font-family: "Museo Sans";
 }
 
 .toolsInfo .stack h2,

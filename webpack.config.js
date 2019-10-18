@@ -1,20 +1,23 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin= require('copy-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  entry: { 'js/index,js': './src/index.js','css/main.css': './src/scss/main.scss'},
+  mode: "development",
+  entry: {
+    "js/index.js": "./src/index.js",
+    "css/main": "./src/scss/main.scss"
+  },
   output: {
-    path: __dirname + '/build/',
+    path: __dirname + "/build/",
     filename: "[name]"
   },
   devServer: {
-    contentBase: './build',
+    contentBase: "./build"
   },
   optimization: {
-    runtimeChunk: true,
+    runtimeChunk: true
   },
   module: {
     rules: [
@@ -24,40 +27,49 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              // you can specify a publicPath here
-              // by default it uses publicPath in webpackOptions.output
-              publicPath: '../',
-              hmr: process.env.NODE_ENV === 'development',
-            },
+              publicPath: "../",
+              hmr: process.env.NODE_ENV === "development"
+            }
           },
-          'css-loader',
-          'sass-loader',
-        ],
+          "css-loader",
+          "sass-loader"
+        ]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {name: 'img/[name].[ext]'}
+            loader: "file-loader",
+            options: { name: "img/[name].[ext]" }
           }
         ]
       },
-    ],
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader",
+        options: {
+          name: "fonts/[name].[ext]"
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.html',
+      filename: "index.html",
+      template: "./src/index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: "[name].css"
     }),
     new CopyWebpackPlugin([
-    {
-      from: './src/img',
-      to: './img'
-    },
-  ]),
-  ],
+      {
+        from: "./src/img",
+        to: "./img"
+      },
+      {
+        from: "./src/fonts",
+        to: "./fonts"
+      }
+    ])
+  ]
 };
