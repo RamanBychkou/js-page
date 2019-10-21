@@ -78,6 +78,7 @@ p {
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
+  justify-content: space-between;
 
   img {
     align-self: center;
@@ -100,8 +101,9 @@ p {
     text-align: justify;
   }
 
-  &:first-child {
+  &:nth-child(2) {
     border-right: 2px solid #ffc000;
+    border-left: 2px solid #ffc000;
   }
 }
 
@@ -320,7 +322,7 @@ h2 {
 }
 
 .title {
-  padding: 10px;
+  padding: 25px;
 }
 
 .events {
