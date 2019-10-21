@@ -124,7 +124,8 @@ p {
   padding: 20px;
   display: flex;
   flex-flow: column nowrap;
-  align-content: center; }
+  align-content: center;
+  justify-content: space-between; }
   .competenceItem img {
     align-self: center;
     margin: 20px; }
@@ -140,8 +141,9 @@ p {
   .competenceItem p {
     font-style: 1rem;
     text-align: justify; }
-  .competenceItem:first-child {
-    border-right: 2px solid #ffc000; }
+  .competenceItem:nth-child(2) {
+    border-right: 2px solid #ffc000;
+    border-left: 2px solid #ffc000; }
 
 .tools,
 .projects {
@@ -302,7 +304,7 @@ h2 {
   padding: 40px 20px; }
 
 .title {
-  padding: 10px; }
+  padding: 25px; }
 
 .events {
   padding: 20px; }
