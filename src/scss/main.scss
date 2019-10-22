@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
 }
 
-p {
+p, figcaption {
   font-family: "Source Sans Pro";
 }
 
@@ -34,8 +34,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 100px;
     position: relative;
+
+    h2 {
+      margin: 20px;
+    }
   }
 
   .prewieTitle::before {
@@ -60,7 +64,7 @@ p {
 .projectsInfo span::before,
 .projectsInfo span::after {
   content: " ";
-  width: 100px;
+  width: 150px;
   height: 5px;
   background-color: #ffc000;
   position: absolute;
@@ -74,7 +78,7 @@ p {
 
 .competenceItem {
   width: 50%;
-  padding: 20px;
+  padding: 20px 50px;
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
@@ -87,13 +91,12 @@ p {
 
   h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 900;
     position: relative;
     color: #000000;
     text-align: center;
     margin: 20px;
     font-family: "Museo Sans";
-    font-weight: 500;
   }
 
   p {
@@ -107,10 +110,6 @@ p {
   }
 }
 
-.tools,
-.projects {
-  margin: 30px 0;
-}
 .tools {
   display: flex;
   justify-content: space-between;
@@ -158,11 +157,10 @@ p {
 .projects {
   display: flex;
   justify-content: space-between;
-  max-height: 300px;
+  background-color: #76cdd8;
 
   .bgImage {
     padding: 20px;
-    background-color: #76cdd8;
 
     img {
       width: 50%;
@@ -173,10 +171,22 @@ p {
     width: 60%;
     position: relative;
     padding: 20px;
+    margin: 0 auto;
+
+    h2 {
+      color: #fff;
+    }
+
+    .projectsWrapper {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
+
 h2 {
   font-family: "Museo Sans";
+  margin: 50px auto;
 }
 
 .toolsInfo .stack h2,
@@ -186,14 +196,9 @@ h2 {
   font-size: 2.5rem;
   text-align: center;
   width: 800px;
-  margin: 15px auto;
 }
 
-.competence h2 span,
-.toolsInfo .stack h2 span,
-.communities h2 span,
-.toolsInfo h2 span,
-.projectsInfo h2 span {
+.title span{
   position: relative;
 }
 
@@ -201,7 +206,7 @@ h2 {
 .title span::before,
 .toolsInfo span::before,
 .projectsInfo span::before {
-  top: 0;
+  top: -5px;
   left: -125px;
 }
 
@@ -209,12 +214,19 @@ h2 {
 .title span::after,
 .toolsInfo span::after,
 .projectsInfo span::after {
-  bottom: 0;
+  bottom: -5px;
   right: -125px;
 }
 
 .stack img {
   width: 100%;
+}
+
+.communities .title,
+.competence .title,
+.events .title,
+.joinUs .title {
+  padding: 40px 0;
 }
 
 .communities {
@@ -223,7 +235,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/conf-long.png");
-  padding: 50px;
+  padding-bottom: 100px;
 
   .communtiesWrapper {
     display: flex;
@@ -242,15 +254,17 @@ h2 {
       }
 
       figcaption {
-        text-align: left;
-        width: 100%;
+        font-size: 1.5rem;
+        margin: 15px 0;
         position: relative;
+        width: 100%;
+        text-align: left;
       }
     }
   }
 
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .communtiesWrapper,
@@ -261,10 +275,10 @@ h2 {
   .comunities-item {
     width: 300px;
     height: 200px;
-    border: 1px solid #fff;
     padding: 50px 20px;
     text-align: center;
     position: relative;
+    background-color: rgba(204, 204, 204, 0.3);
 
     &:hover .communitiesItemDescription {
       display: flex;
@@ -321,26 +335,21 @@ h2 {
   padding: 40px 20px;
 }
 
-.title {
-  padding: 25px;
-}
-
 .events {
-  padding: 20px;
+  padding-bottom: 100px;
 }
 
 .events h2,
 .competence h2 {
   font-size: 2.5rem;
   position: relative;
-  margin: 15px auto;
   width: 500px;
   color: #000000;
   text-align: center;
 }
 
 .title p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -351,7 +360,7 @@ h2 {
   .eventItem {
     width: 500px;
     padding: 20px;
-    border: 1px solid #ffc000;
+    background-color: rgba(204, 204, 204, 0.3);
     text-align: justify;
 
     &:hover img {
@@ -370,6 +379,49 @@ h2 {
       position: relative;
       width: 100%;
       text-align: left;
+    }
+  }
+}
+
+.joinUs {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../img/conf-big.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+
+  .title {
+    color: #ffffff;
+
+    h2 {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 36px;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 40px;
+    width: 80%;
+
+    img {
+      width: 100%;
+
+    }
+    a:nth-child(3) img {
+      width: 55%;
     }
   }
 }
