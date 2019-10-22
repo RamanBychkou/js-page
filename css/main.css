@@ -57,13 +57,18 @@ table {
   src: url(../fonts/MuseoSans-700.otf) format("opentype"); }
 
 @font-face {
+  font-family: "Museo Sans";
+  font-weight: 900;
+  src: url(../fonts/MuseoSans-900.otf) format("opentype"); }
+
+@font-face {
   font-family: "Source Sans Pro";
   src: url(../fonts/SourceSansPro-Regular.otf) format("opentype"); }
 
 body {
   box-sizing: border-box; }
 
-p {
+p, figcaption {
   font-family: "Source Sans Pro"; }
 
 .container {
@@ -89,8 +94,10 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 100px;
     position: relative; }
+    .prewie .prewieTitle h2 {
+      margin: 20px; }
   .prewie .prewieTitle::before {
     top: 140px;
     left: 51px; }
@@ -109,7 +116,7 @@ p {
 .projectsInfo span::before,
 .projectsInfo span::after {
   content: " ";
-  width: 100px;
+  width: 150px;
   height: 5px;
   background-color: #ffc000;
   position: absolute; }
@@ -121,7 +128,7 @@ p {
 
 .competenceItem {
   width: 50%;
-  padding: 20px;
+  padding: 20px 50px;
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
@@ -131,23 +138,18 @@ p {
     margin: 20px; }
   .competenceItem h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 900;
     position: relative;
     color: #000000;
     text-align: center;
     margin: 20px;
-    font-family: "Museo Sans";
-    font-weight: 500; }
+    font-family: "Museo Sans"; }
   .competenceItem p {
     font-style: 1rem;
     text-align: justify; }
   .competenceItem:nth-child(2) {
     border-right: 2px solid #ffc000;
     border-left: 2px solid #ffc000; }
-
-.tools,
-.projects {
-  margin: 30px 0; }
 
 .tools {
   display: flex;
@@ -182,19 +184,25 @@ p {
 .projects {
   display: flex;
   justify-content: space-between;
-  max-height: 300px; }
+  background-color: #76cdd8; }
   .projects .bgImage {
-    padding: 20px;
-    background-color: #76cdd8; }
+    padding: 20px; }
     .projects .bgImage img {
       width: 50%; }
   .projects .projectsInfo {
     width: 60%;
     position: relative;
-    padding: 20px; }
+    padding: 20px;
+    margin: 0 auto; }
+    .projects .projectsInfo h2 {
+      color: #fff; }
+    .projects .projectsInfo .projectsWrapper {
+      display: flex;
+      justify-content: center; }
 
 h2 {
-  font-family: "Museo Sans"; }
+  font-family: "Museo Sans";
+  margin: 50px auto; }
 
 .toolsInfo .stack h2,
 .communities h2,
@@ -202,32 +210,33 @@ h2 {
 .projectsInfo h2 {
   font-size: 2.5rem;
   text-align: center;
-  width: 800px;
-  margin: 15px auto; }
+  width: 800px; }
 
-.competence h2 span,
-.toolsInfo .stack h2 span,
-.communities h2 span,
-.toolsInfo h2 span,
-.projectsInfo h2 span {
+.title span {
   position: relative; }
 
 .stack span::before,
 .title span::before,
 .toolsInfo span::before,
 .projectsInfo span::before {
-  top: 0;
+  top: -5px;
   left: -125px; }
 
 .stack span::after,
 .title span::after,
 .toolsInfo span::after,
 .projectsInfo span::after {
-  bottom: 0;
+  bottom: -5px;
   right: -125px; }
 
 .stack img {
   width: 100%; }
+
+.communities .title,
+.competence .title,
+.events .title,
+.joinUs .title {
+  padding: 40px 0; }
 
 .communities {
   background-blend-mode: multiply;
@@ -235,7 +244,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/conf-long.png);
-  padding: 50px; }
+  padding-bottom: 100px; }
   .communities .communtiesWrapper {
     display: flex;
     justify-content: space-around; }
@@ -249,21 +258,23 @@ h2 {
       .communities .communtiesWrapper figure img {
         width: 9rem; }
       .communities .communtiesWrapper figure figcaption {
-        text-align: left;
+        font-size: 1.5rem;
+        margin: 15px 0;
+        position: relative;
         width: 100%;
-        position: relative; }
+        text-align: left; }
   .communities .title {
-    margin-bottom: 20px; }
+    margin-bottom: 50px; }
   .communities .communtiesWrapper,
   .communities .title {
     color: #fff; }
   .communities .comunities-item {
     width: 300px;
     height: 200px;
-    border: 1px solid #fff;
     padding: 50px 20px;
     text-align: center;
-    position: relative; }
+    position: relative;
+    background-color: rgba(204, 204, 204, 0.3); }
     .communities .comunities-item:hover .communitiesItemDescription {
       display: flex;
       justify-content: center;
@@ -303,23 +314,19 @@ h2 {
   color: #000000;
   padding: 40px 20px; }
 
-.title {
-  padding: 25px; }
-
 .events {
-  padding: 20px; }
+  padding-bottom: 100px; }
 
 .events h2,
 .competence h2 {
   font-size: 2.5rem;
   position: relative;
-  margin: 15px auto;
   width: 500px;
   color: #000000;
   text-align: center; }
 
 .title p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center; }
 
 .eventsList {
@@ -328,7 +335,7 @@ h2 {
   .eventsList .eventItem {
     width: 500px;
     padding: 20px;
-    border: 1px solid #ffc000;
+    background-color: rgba(204, 204, 204, 0.3);
     text-align: justify; }
     .eventsList .eventItem:hover img {
       filter: none; }
@@ -343,4 +350,34 @@ h2 {
       position: relative;
       width: 100%;
       text-align: left; }
+
+.joinUs {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url(../img/conf-big.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 600px; }
+  .joinUs .title {
+    color: #ffffff; }
+    .joinUs .title h2 {
+      font-size: 48px;
+      text-align: center; }
+    .joinUs .title p {
+      font-size: 36px; }
+  .joinUs .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 40px;
+    width: 80%; }
+    .joinUs .links img {
+      width: 100%; }
+    .joinUs .links a:nth-child(3) img {
+      width: 55%; }
 
