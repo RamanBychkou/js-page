@@ -367,6 +367,10 @@ h2 {
   text-align: center;
 }
 
+.events {
+  background-color: #f4f4f4;
+}
+
 .eventsList {
   display: flex;
   justify-content: space-around;
@@ -376,6 +380,7 @@ h2 {
     padding: 20px;
     background-color: rgba(204, 204, 204, 0.3);
     text-align: justify;
+    background-color: #fff;
 
     &:hover img {
       filter: none;
