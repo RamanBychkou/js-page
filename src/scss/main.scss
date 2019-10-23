@@ -1,5 +1,6 @@
 @import "./reset.scss";
 @import "./fonts.scss";
+@import "./epam.scss";
 
 body {
   box-sizing: border-box;
@@ -26,7 +27,7 @@ p, figcaption {
   background-position: 0 -145px;
 
   .prewieTitle {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(38, 56, 82 , 0.7);
     width: 650px;
     color: #fff;
     font-size: 3rem;
@@ -66,14 +67,15 @@ p, figcaption {
   content: " ";
   width: 150px;
   height: 5px;
-  background-color: #ffc000;
+  background-color: #76cdd8;
   position: absolute;
 }
 
 .competenceContainer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
+  max-width: 1920px;
 }
 
 .competenceItem {
@@ -105,14 +107,31 @@ p, figcaption {
   }
 
   &:nth-child(2) {
-    border-right: 2px solid #ffc000;
-    border-left: 2px solid #ffc000;
+    position: relative;
+    &::before, &::after {
+      content: " ";
+      width: 0;
+      height: 150px;
+      border: 1px solid #76cdd8;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    };
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 }
 
 .tools {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(238,238,238);
 
   .bgImage {
     filter: brightness(0.3);
@@ -157,7 +176,6 @@ p, figcaption {
 .projects {
   display: flex;
   justify-content: space-between;
-  background-color: #76cdd8;
 
   .bgImage {
     padding: 20px;
@@ -172,10 +190,6 @@ p, figcaption {
     position: relative;
     padding: 20px;
     margin: 0 auto;
-
-    h2 {
-      color: #fff;
-    }
 
     .projectsWrapper {
       display: flex;
@@ -231,7 +245,7 @@ h2 {
 
 .communities {
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(38, 56, 82 , 0.7);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/conf-long.png");
@@ -274,8 +288,8 @@ h2 {
 
   .comunities-item {
     width: 300px;
-    height: 200px;
-    padding: 50px 20px;
+    height: 250px;
+    padding: 20px;
     text-align: center;
     position: relative;
     background-color: rgba(204, 204, 204, 0.3);
@@ -324,7 +338,7 @@ h2 {
   content: " ";
   width: 50px;
   height: 5px;
-  background: #ffc000;
+  background: #76cdd8;
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -370,7 +384,7 @@ h2 {
     img {
       width: 100%;
       height: 350px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(38, 56, 82 , 0.7);
       filter: brightness(0.5);
     }
     figcaption {
@@ -384,7 +398,7 @@ h2 {
 }
 
 .joinUs {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(38, 56, 82 , 0.7);
   background-image: url("../img/conf-big.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -393,7 +407,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 600px;
+  height: 650px;
 
   .title {
     color: #ffffff;
