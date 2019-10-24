@@ -2,19 +2,26 @@
 @import "./fonts.scss";
 @import "./epam.scss";
 
-body {
-  box-sizing: border-box;
+main.content {
+  margin-top: 24px;
 }
 
-p, figcaption {
-  font-family: "Source Sans Pro";
-}
+.title {
+  margin: 30px 0;
+  h2 {
+    font-size: 47px;
+    font-weight: 500;
+    text-align: center;
+    span {
+      position: relative;
+    }
+  }
+  p {
+  text-align: center;
+  font-size: 27px;
+ }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
 }
-
 .prewie {
   display: flex;
   justify-content: space-between;
@@ -27,10 +34,9 @@ p, figcaption {
   background-position: 0 -145px;
 
   .prewieTitle {
-    background-color: rgba(38, 56, 82 , 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 650px;
     color: #fff;
-    font-size: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +45,8 @@ p, figcaption {
     position: relative;
 
     h2 {
-      margin: 20px;
+      font-size: 3vw;
+      font-weight: 500;
     }
   }
 
@@ -55,15 +62,7 @@ p, figcaption {
 }
 
 .prewieTitle::before,
-.prewieTitle::after,
-.stack span::before,
-.stack span::after,
-.title span::before,
-.title span::after,
-.toolsInfo span::before,
-.toolsInfo span::after,
-.projectsInfo span::before,
-.projectsInfo span::after {
+.prewieTitle::after {
   content: " ";
   width: 150px;
   height: 5px;
@@ -71,185 +70,151 @@ p, figcaption {
   position: absolute;
 }
 
-.competenceContainer {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto 60px;
-  max-width: 1920px;
+.info {
+  max-height: 300px;
+  padding: 50px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-text-wrapper {
+    width: 35%;
+    h2 {
+      text-align: left;
+    }
+    span {
+      position: relative;
+    }
+    p {
+      font-size: 1vw;
+    }
+  }
+
+  .info-logo-wrapper {
+    width: 56%;
+
+    img {
+      width: 135%;
+    }
+  }
 }
 
-.competenceItem {
-  width: 50%;
-  padding: 20px 50px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-content: center;
-  justify-content: space-between;
+.title span::before,
+.title span::after {
+  content: " ";
+  width: 150px;
+  height: 5px;
+  background-color: #76cdd8;
+  position: absolute;
+}
 
-  img {
-    align-self: center;
-    margin: 20px;
+.title span::before {
+  left: -125px;
+  top: -3px;
+}
+.title span::after  {
+  right: -125px;
+  bottom: -3px;
+}
+
+.activities {
+  background-color: #f4f4f4;
+  padding: 55px 0;
+  h2 {
+    text-align: left;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    position: relative;
-    color: #000000;
-    text-align: center;
-    margin: 20px;
-    font-family: "Museo Sans";
-  }
+  .activitiesWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
 
-  p {
-    font-style: 1rem;
-    text-align: justify;
-  }
-
-  &:nth-child(2) {
-    position: relative;
-    &::before, &::after {
-      content: " ";
-      width: 0;
-      height: 150px;
-      border: 1px solid #76cdd8;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    };
-
-    &::before {
-      left: 0;
+    h3 {
+      margin: 25px 0;
+      font-size: 31px;
     }
 
-    &::after {
-      right: 0;
+    .leftItem {
+      width: 35%;
+    }
+
+    .rightItem {
+      margin-top: 213px;
+      width: 58%;
+    }
+
+    p {
+      font-size: 1vw;
+    }
+  }
+}
+
+.clients {
+  background-image: url("../img/innovative.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0 ,0, 0.7);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: #fff;
+
+  .clientWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-flow: row wrap;
+
+    .clientItem {
+      width: 20%;
+      margin: 20px;
+    }
+    img {
+      width: 200px;
     }
   }
 }
 
 .tools {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(238,238,238);
+  padding: 50px;
+  background-color: #f4f4f4;
+  .toolsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
 
-  .bgImage {
-    filter: brightness(0.3);
-  }
-
-  .toolsInfo {
-    width: 60%;
-    position: relative;
-
-    p {
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: bold;
-      position: absolute;
-      top: 0;
-    }
-
-    .stack {
-      background-color: #fff;
-      padding: 20px;
-      color: #000000;
-    }
-
-    .toolsLogo {
+    .toolsItem {
+      width: 16vw;
+      height: 16vw;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      flex: 1 1 auto;
+      border-radius: 4px;
+      margin: 0.5vw 1vw;
       display: flex;
       justify-content: center;
+      align-items: center;
+
+      &:hover img {
+        transform: scale(1.3);
+      }
     }
-  }
-}
-
-.bgImage {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    width: 100%;
-  }
-}
-
-.projects {
-  display: flex;
-  justify-content: space-between;
-
-  .bgImage {
-    padding: 20px;
-
     img {
-      width: 50%;
+      width: 220px;
     }
   }
-
-  .projectsInfo {
-    width: 60%;
-    position: relative;
-    padding: 20px;
-    margin: 0 auto;
-
-    .projectsWrapper {
-      display: flex;
-      justify-content: center;
-    }
-  }
-}
-
-h2 {
-  font-family: "Museo Sans";
-  margin: 50px auto;
-}
-
-.toolsInfo .stack h2,
-.communities h2,
-.toolsInfo h2,
-.projectsInfo h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  width: 800px;
-}
-
-.title span{
-  position: relative;
-}
-
-.stack span::before,
-.title span::before,
-.toolsInfo span::before,
-.projectsInfo span::before {
-  top: -5px;
-  left: -125px;
-}
-
-.stack span::after,
-.title span::after,
-.toolsInfo span::after,
-.projectsInfo span::after {
-  bottom: -5px;
-  right: -125px;
-}
-
-.stack img {
-  width: 100%;
-}
-
-.communities .title,
-.competence .title,
-.events .title,
-.joinUs .title {
-  padding: 40px 0;
 }
 
 .communities {
   background-blend-mode: multiply;
-  background-color: rgba(38, 56, 82 , 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/conf-long.png");
   padding-bottom: 100px;
+  padding: 50px;
 
   .communtiesWrapper {
     display: flex;
@@ -262,6 +227,7 @@ h2 {
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      width: 100%;
 
       img {
         width: 9rem;
@@ -277,19 +243,22 @@ h2 {
     }
   }
 
-  .title {
-    margin-bottom: 50px;
-  }
-
   .communtiesWrapper,
   .title {
     color: #fff;
   }
 
   .comunities-item {
-    width: 300px;
-    padding: 30px;
-    text-align: center;
+    width: 16vw;
+    height: 16vw;
+    position: relative;
+    flex: 1 1 auto;
+    border-radius: 4px;
+    margin: 0.5vw 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
     position: relative;
     background-color: rgba(204, 204, 204, 0.3);
 
@@ -298,20 +267,8 @@ h2 {
       justify-content: center;
       align-items: center;
       text-align: justify;
-    }
-
-    &:first-of-type .communitiesItemDescription {
       background-color: rgba(118, 205, 216, 0.65);
     }
-
-    &:nth-of-type(2) .communitiesItemDescription {
-      background-color: rgba(127, 101, 22, 0.65);
-    }
-
-    &:last-of-type .communitiesItemDescription p {
-      color: #000000;
-    }
-
     &:last-child img {
       width: 14rem;
     }
@@ -348,98 +305,78 @@ h2 {
   padding: 40px 20px;
 }
 
-.events {
-  padding-bottom: 100px;
-}
-
-.events h2,
-.competence h2 {
-  font-size: 2.5rem;
-  position: relative;
-  width: 500px;
-  color: #000000;
-  text-align: center;
-}
-
-.title p {
-  font-size: 1.5rem;
-  text-align: center;
-}
 
 .events {
-  background-color: #f4f4f4;
-}
+  padding: 50px;
 
-.eventsList {
-  display: flex;
-  justify-content: space-around;
+  .eventsList {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
 
-  .eventItem {
-    width: 500px;
-    padding: 20px;
-    background-color: rgba(204, 204, 204, 0.3);
-    text-align: justify;
-    background-color: #fff;
+    .eventItem {
+      width: 500px;
+      padding: 20px;
+      background-color: rgba(204, 204, 204, 0.3);
+      text-align: justify;
+      border-radius: 4px;
 
-    &:hover img {
-      filter: none;
-    }
+      &:hover img {
+        filter: none;
+      }
 
-    img {
-      width: 100%;
-      height: 350px;
-      background-color: rgba(38, 56, 82 , 0.7);
-      filter: brightness(0.5);
-    }
-    figcaption {
-      font-size: 1.5rem;
-      margin: 15px 0;
-      position: relative;
-      width: 100%;
-      text-align: left;
+      img {
+        width: 100%;
+        height: 350px;
+        background-color: rgba(0, 0, 0, 0.7);
+        filter: brightness(0.5);
+      }
+      figcaption {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        position: relative;
+        width: 100%;
+        text-align: left;
+      }
     }
   }
 }
 
-.joinUs {
-  background-color: rgba(38, 56, 82 , 0.7);
-  background-image: url("../img/conf-big.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
+
+.cc__mission {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0;
+  width: 75vw;
+}
+
+.cc__mission-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  background: #F4F4F4;
+}
+
+.cc__mission-logo {
+  margin-right: 114px;
+  margin-top: -85px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cc__container {
+  display: flex;
   flex-direction: column;
-  height: 650px;
+  align-items: center;
+  color: #212529;
+  padding: 0;
+}
 
-  .title {
-    color: #ffffff;
-
-    h2 {
-      font-size: 48px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  .links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    margin: 40px;
-    width: 80%;
-
-    img {
-      width: 100%;
-
-    }
-    a:nth-child(3) img {
-      width: 55%;
-    }
-  }
+.cc__mission-text {
+  font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 30px;
 }
