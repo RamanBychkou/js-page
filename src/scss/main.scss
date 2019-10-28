@@ -4,6 +4,7 @@
 
 main.content {
   margin-top: 24px;
+  overflow: hidden;
 }
 
 h2 {
@@ -39,6 +40,7 @@ p {
  }
 
 }
+
 .prewie {
   display: flex;
   justify-content: center;
@@ -63,7 +65,7 @@ p {
     position: relative;
 
     h2 {
-      font-size: 3.5vw;
+      font-size: 3.5rem;
       font-weight: 500;
     }
 
@@ -86,11 +88,7 @@ p {
       right: -50px;
     }
   }
-
-
 }
-
-
 
 .info {
   height: 300px;
@@ -125,6 +123,9 @@ p {
     }
   }
 }
+
+
+
 
 .title span::before,
 .title span::after {
@@ -188,31 +189,7 @@ p {
   }
 }
 
-// .clients {
-//   background-image: url("../img/innovative.jpg");
-//   background-size: cover;
-//   background-color: rgba(0, 0 ,0, 0.7);
-//   background-blend-mode: multiply;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   padding: 50px;
-//   color: #fff;
 
-//   .clientWrapper {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: baseline;
-//     flex-flow: row wrap;
-
-//     .clientItem {
-//       width: 20%;
-//       margin: 20px;
-//     }
-//     img {
-//       width: 200px;
-//     }
-//   }
-// }
 .clients {
   background-image: url("../img/innovative.jpg");
   background-size: cover;
@@ -226,74 +203,77 @@ p {
   .title {
     margin-bottom: 0;
   }
+}
+.clientWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
-  .clientWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+.clientItem {
+  flex-basis: 15%;
+  margin: 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vw;
 
-    .clientItem {
-      flex-basis: 15%;
-      margin: 20px 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 7vw;
+  &:nth-child(4),
+  &:nth-child(5) {
+    flex-basis: 38%;
+  }
 
-      &:nth-child(4),
-      &:nth-child(5) {
-        flex-basis: 38%;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-
+  img {
+    width: 100%;
   }
 }
+
+
+
 
 .tools {
   padding: 50px;
   background-color: #f4f4f4;
-  .toolsWrapper {
+}
+
+.toolsWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
+}
 
-    .toolsItem {
-      width: 325px;
-      height: 290px;
-      background-color: rgb(255, 255, 255);
-      position: relative;
-      flex: 1 1 auto;
-      border-radius: 4px;
-      margin: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.toolsItem {
+  width: 325px;
+  height: 290px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: 4px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      &:hover img {
-        transform: scale(1.3);
-      }
+  &:hover img {
+    transform: scale(1.3);
+  }
 
-      &:first-child,
-      &:last-child {
-       width: 63%;
-      }
+  &:first-child,
+  &:last-child {
+   width: 63%;
+  }
 
-      &:nth-child(3),  &:nth-child(4){
-        width: 45%;
-      }
-    }
-    img {
-      width: 220px;
-    }
+  &:nth-child(3),  &:nth-child(4){
+    width: 45%;
+  }
+  img {
+    width: 220px;
   }
 }
+
+
 
 .communities {
   background-blend-mode: multiply;
@@ -302,7 +282,7 @@ p {
   background-size: cover;
   background-image: url("../img/conf-long.png");
   padding-bottom: 100px;
-  padding: 50px;
+  padding: 50px 15px;
 
   .communtiesWrapper {
     display: flex;
@@ -397,11 +377,12 @@ p {
 
 
 .events {
-  padding: 50px;
+  padding: 50px 15px;
 
   .eventsList {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 40px 0;
     max-width: 1920px;
 
@@ -418,7 +399,6 @@ p {
 
       img {
         width: 100%;
-        height: 350px;
         background-color: rgba(0, 0, 0, 0.7);
         filter: brightness(0.5);
       }
@@ -438,12 +418,17 @@ p {
   }
 }
 
+@media screen and (max-width:  1570px) {
+  .events .eventsList .eventItem {
+    width: 350px;
+  }
+}
 
 .cc__mission {
   display: flex;
   flex-direction: row;
   padding: 50px 0;
-  width: 75vw;
+  width: 80%;
 }
 
 .cc__mission-wrapper {
@@ -475,4 +460,226 @@ p {
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 30px;
+}
+
+
+
+@media screen and (max-width: 1410px) {
+  .cc__mission {
+    width: 95%;
+    .cc__mission-logo {
+      margin-right: 50px;
+      margin-top: -70px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .toolsItem {
+    flex-basis: 20%;
+
+    img {
+      width: 50%;
+      max-width: 220px;
+    }
+
+    &:first-child {
+      flex-basis: 100%;
+    }
+
+    &:nth-child(3n+1):not(:first-child) {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .activities {
+    .container {
+      padding: 0 30px;
+      .title h2 {
+        text-align: center;
+      }
+      .activitiesWrapper {
+        width: 80%;
+        margin: 0 auto;
+        .rightItem, .leftItem {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+
+          .activityItem {
+            margin: 20px auto;
+            width: inherit;
+            text-align: center;
+
+            p {
+              text-align: justify;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+
+  .events .eventsList {
+    flex-direction: column;
+    align-items: center;
+    .eventItem {
+      width: 500px;
+      margin: 20px;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1020px) {
+
+  .prewie {
+    background-size: top;
+  }
+  .info {
+    height: auto;
+
+    .infoContainer {
+      align-items: center;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .communtiesWrapper, .eventsList {
+    flex-wrap: wrap;
+
+    .comunities-item, .eventItem {
+      margin: 15px;
+    }
+    .comunities-item:last-child {
+      width: 100%;
+    }
+  }
+
+  .cc__mission {
+    width: 100%;
+    padding: 0 35px;
+    .cc__mission-logo {
+      margin-top: 0px;
+  }}
+
+  .title span::before,
+  .title span::after {
+    width: 100px;
+  }
+
+  .title span::before {
+    left: -75px;
+  }
+
+  .title span::after {
+    right: -75px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .title h2 {
+    font-size: 37px;
+  }
+  .prewie {
+    height: 320px;
+    background-size: auto;
+
+    .prewieTitle {
+      width: 100%;
+      padding: 20px 0;
+      h2::before {
+        left: 0;
+        top: 0;
+      }
+
+      h2::after {
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+
+  }
+  .infoContainer {
+    flex-direction: column;
+
+    .info-text-wrapper,
+    .info-logo-wrapper  {
+      width: 100%;
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .activities,
+  .clients,
+  .tools
+  .communities,
+  .events {
+    padding: 25px 25px 40px;
+  }
+  .clientWrapper {
+    .clientItem {
+      margin: 50px 20px;
+      flex-basis: 25%;
+    }
+
+    @media screen and (max-width: 600px){
+      flex-direction: column;
+
+      .clientItem {
+        flex-basis: 100%;
+      }
+    }
+  }
+  .cc__mission-logo {
+    display: none;
+  }
+
+  .toolsItem {
+    margin: 10px;
+
+    &:not(:first-child) {
+      flex-basis: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .events .eventsList .eventItem {
+    width: 350px;
+    margin: 20px 0;
+  }
+
+  .info-text-wrapper {
+    width: 100%;
+  }
+
+  .info-logo-wrapper {
+    display: none;
+  }
+
+  .activities .container .activitiesWrapper {
+    width: 100%;
+  }
+
+  .toolsWrapper {
+    flex-direction: column;
+    .toolsItem {
+      width: 100%;
+      min-height: 300px;
+  }}
 }
