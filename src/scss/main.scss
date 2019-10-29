@@ -92,39 +92,37 @@ p {
 .info {
   height: 300px;
   padding: 50px;
-  .infoContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 1920px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.info-text-wrapper {
+  width: 40%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  h2 {
+    text-align: left;
   }
-
-  .info-text-wrapper {
-    width: 40%;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    h2 {
-      text-align: left;
-    }
-    span {
-      position: relative;
-    }
-  }
-
-  .info-logo-wrapper {
-    width: 55%;
-
-    img {
-      width: 100%;
-    }
+  span {
+    position: relative;
   }
 }
 
+.info-logo-wrapper {
+  width: 55%;
 
-
+  img {
+    width: 100%;
+  }
+}
 
 .title span::before,
 .title span::after {
@@ -615,14 +613,18 @@ p {
   }
   .infoContainer {
     flex-direction: column;
+    width: 100%;
 
-    .info-text-wrapper,
-    .info-logo-wrapper  {
+    .info-text-wrapper {
       width: 100%;
+      padding: 20px 0;
 
       p {
         text-align: justify;
       }
+    }
+    .info-logo-wrapper {
+      display: none;
     }
   }
 
@@ -634,15 +636,6 @@ p {
     padding: 25px 25px 40px;
   }
 
-  // .clientWrapper {
-  //   width: 48%;
-  //   justify-content: space-between;
-
-  //   .clientItem {
-  //     margin: 10px;
-
-  //   }
-  // }
   .cc__mission-logo {
     display: none;
   }
@@ -675,7 +668,7 @@ p {
 
     }
     p {
-      font-size: 18px;
+      font-size: 23px;
     }
   }
   .prewieTitle{
@@ -695,20 +688,16 @@ p {
   }
 
   .info, .clients, .events {
-    padding: 20px;
+    padding: 30px;
   }
 
   .events .eventsList .eventItem {
-    width: 350px;
+    width: 100%;
     margin: 20px 0;
   }
 
   .info-text-wrapper {
     width: 100%;
-  }
-
-  .info-logo-wrapper {
-    display: none;
   }
 
   .activities .container .activitiesWrapper {
@@ -725,7 +714,7 @@ p {
   .toolsWrapper {
     flex-direction: column;
     .toolsItem {
-      width: 100%;
+      width: 90%;
       min-height: 300px;
   }}
 }
