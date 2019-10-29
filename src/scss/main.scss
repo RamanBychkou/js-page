@@ -53,40 +53,39 @@ p {
   background-blend-mode: multiply;
   background-position: 0 -125px;
   background-color: rgba(0, 0, 0, 0.7);
+}
+.prewieTitle {
+  width: 750px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 130px;
+  position: relative;
 
-  .prewieTitle {
-    width: 750px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 130px;
-    position: relative;
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
 
-    h2 {
-      font-size: 3.5rem;
-      font-weight: 500;
-    }
+  h2::before,
+  h2::after {
+    content: " ";
+    width: 150px;
+    height: 5px;
+    background-color: #76cdd8;
+    position: absolute;
+  }
 
-    h2::before,
-    h2::after {
-      content: " ";
-      width: 150px;
-      height: 5px;
-      background-color: #76cdd8;
-      position: absolute;
-    }
+  h2::before {
+    top: 50px;
+    left: -50px;
+  }
 
-    h2::before {
-      top: 50px;
-      left: -50px;
-    }
-
-    h2::after {
-      bottom: 50px;
-      right: -50px;
-    }
+  h2::after {
+    bottom: 50px;
+    right: -50px;
   }
 }
 
@@ -197,7 +196,7 @@ p {
   background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 70px;
+  padding: 70px 0;
   color: #fff;
 
   .title {
@@ -209,20 +208,16 @@ p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .clientItem {
-  flex-basis: 15%;
-  margin: 20px 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 7vw;
-
-  &:nth-child(4),
-  &:nth-child(5) {
-    flex-basis: 38%;
-  }
+  height: auto;
+  margin: 20px;
 
   img {
     width: 100%;
@@ -465,6 +460,13 @@ p {
 
 
 @media screen and (max-width: 1410px) {
+  .clientWrapper {
+    width: 580px;
+    .clientItem {
+      margin: 20px;
+    }
+  }
+
   .cc__mission {
     width: 95%;
     .cc__mission-logo {
@@ -631,20 +633,16 @@ p {
   .events {
     padding: 25px 25px 40px;
   }
-  .clientWrapper {
-    .clientItem {
-      margin: 50px 20px;
-      flex-basis: 25%;
-    }
 
-    @media screen and (max-width: 600px){
-      flex-direction: column;
+  // .clientWrapper {
+  //   width: 48%;
+  //   justify-content: space-between;
 
-      .clientItem {
-        flex-basis: 100%;
-      }
-    }
-  }
+  //   .clientItem {
+  //     margin: 10px;
+
+  //   }
+  // }
   .cc__mission-logo {
     display: none;
   }
@@ -659,6 +657,47 @@ p {
 }
 
 @media screen and (max-width: 600px){
+  .title {
+    h2 {
+      font-size: 32px;
+      span {
+        &::before,
+        &::after {
+          width: 70px;
+        }
+        &::before {
+          left: -45px;
+        }
+        &::after {
+          right: -45px;
+        }
+      }
+
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .prewieTitle{
+    h2 {
+    font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .activities,
+  .tools,
+  .communities {
+    padding: 30px 0;
+  }
+
+  .info, .clients, .events {
+    padding: 20px;
+  }
+
   .events .eventsList .eventItem {
     width: 350px;
     margin: 20px 0;
@@ -676,6 +715,13 @@ p {
     width: 100%;
   }
 
+  .clientWrapper {
+    flex-direction: column;
+    width: 100%;
+    .clientItem {
+      margin: 20px;
+    }
+  }
   .toolsWrapper {
     flex-direction: column;
     .toolsItem {
