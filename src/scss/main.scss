@@ -465,6 +465,18 @@ p {
     }
   }
 
+  .info {
+    height: auto;
+
+    .infoContainer {
+      align-items: center;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
   .teamItem:first-child {
     display: flex;
     justify-content: center;
@@ -564,17 +576,7 @@ p {
   .prewie {
     background-size: top;
   }
-  .info {
-    height: auto;
 
-    .infoContainer {
-      align-items: center;
-    }
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
 
   .communtiesWrapper, .eventsList {
     flex-wrap: wrap;
