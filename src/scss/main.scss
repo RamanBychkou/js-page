@@ -473,6 +473,29 @@ p {
     }
   }
 
+  .activities .container {
+    display: flex;
+    justify-content: space-between;
+
+    .activitiesWrapper {
+      order: 1;
+    }
+    .title {
+      order: 2;
+      min-width: 50%;
+      height: 200px;
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .leftItem {
+      min-width: 80%;
+    }
+    .rightItem {
+      min-width: 200%;
+    }
+  }
   p {
     font-size: 1.2rem;
   }
@@ -493,6 +516,23 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
+  .infoContainer {
+    flex-direction: column;
+    width: 100%;
+
+    .info-text-wrapper {
+      width: 100%;
+      padding: 20px 0;
+
+      p {
+        text-align: justify;
+      }
+    }
+    .info-logo-wrapper {
+      display: none;
+    }
+  }
+
   .team {
     flex-direction: column;
     align-items: center;
@@ -532,20 +572,25 @@ p {
   .activities {
     .container {
       padding: 0 30px;
-      .title h2 {
+      flex-direction: column;
+      .title {
+        order: 1;
+        height: auto;
+        h2 {
         text-align: center;
-      }
+      }}
       .activitiesWrapper {
         width: 80%;
         margin: 0 auto;
+
         .rightItem, .leftItem {
           flex-direction: column;
           justify-content: center;
-          width: 100%;
+          min-width: 100%;
 
           .activityItem {
             margin: 20px auto;
-            width: inherit;
+            width: 100%;
             text-align: center;
 
             p {
@@ -636,22 +681,7 @@ p {
 
 
   }
-  .infoContainer {
-    flex-direction: column;
-    width: 100%;
 
-    .info-text-wrapper {
-      width: 100%;
-      padding: 20px 0;
-
-      p {
-        text-align: justify;
-      }
-    }
-    .info-logo-wrapper {
-      display: none;
-    }
-  }
 
   .activities,
   .clients,
